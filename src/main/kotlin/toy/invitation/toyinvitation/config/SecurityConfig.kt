@@ -17,7 +17,6 @@ class SecurityConfig(private val jwtTokenProvider: JwtTokenProvider): WebSecurit
     fun passwordEncoder(): PasswordEncoder {
         return BCryptPasswordEncoder()
     }
-
     @Bean
     override fun authenticationManagerBean(): AuthenticationManager {
         return super.authenticationManagerBean()
