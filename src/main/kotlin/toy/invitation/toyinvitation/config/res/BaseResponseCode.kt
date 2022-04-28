@@ -1,4 +1,4 @@
-package toy.invitation.toyinvitation.config
+package toy.invitation.toyinvitation.config.res
 
 import org.springframework.http.HttpStatus
 

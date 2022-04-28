@@ -1,4 +1,4 @@
-package toy.invitation.toyinvitation.config
+package toy.invitation.toyinvitation.config.user
 
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository

@@ -1,7 +1,8 @@
-package toy.invitation.toyinvitation.config
+package toy.invitation.toyinvitation.config.user
 
 import org.springframework.security.core.GrantedAuthority
 import org.springframework.security.core.userdetails.UserDetails
+import toy.invitation.toyinvitation.config.BaseTime
 import javax.persistence.*
 
 @Entity

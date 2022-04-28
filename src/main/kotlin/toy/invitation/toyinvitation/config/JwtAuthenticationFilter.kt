@@ -13,7 +13,8 @@ class JwtAuthenticationFilter(private val jwtTokenProvider: JwtTokenProvider): G
     @Throws(IOException::class, ServletException::class)
     override fun doFilter(request: ServletRequest, response: ServletResponse, chain: FilterChain) {
         // 헤더에서 JWT 를 받아옵니다.
-        val token: String? = jwtTokenProvider.resolveToken((request as HttpServletRequest))
+        var token: String? = jwtTokenProvider.resolveToken((request as HttpServletRequest))
+        if (token != null) token = token.replace("Bearer ", "")
         // 유효한 토큰인지 확인합니다.
         if (token != null && jwtTokenProvider.validateToken(token)) {
             // 토큰이 유효하면 토큰으로부터 유저 정보를 받아옵니다.

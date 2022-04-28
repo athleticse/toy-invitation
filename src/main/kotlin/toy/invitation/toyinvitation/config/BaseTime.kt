@@ -1,6 +1,7 @@
 package toy.invitation.toyinvitation.config
 
 import org.hibernate.annotations.CreationTimestamp
+import org.hibernate.annotations.UpdateTimestamp
 import org.springframework.data.jpa.domain.support.AuditingEntityListener
 import java.time.LocalDateTime
 import javax.persistence.Column
@@ -13,9 +14,9 @@ abstract class BaseTime {
 
     @CreationTimestamp
     @Column(nullable = false, updatable = false)
-    val createdAt: LocalDateTime? = null
+    val createdDateTime: LocalDateTime? = null
 
-    @CreationTimestamp
+    @UpdateTimestamp
     @Column(nullable = false)
-    val updatedAt: LocalDateTime? = null
+    val updatedDateTime: LocalDateTime? = null
 }

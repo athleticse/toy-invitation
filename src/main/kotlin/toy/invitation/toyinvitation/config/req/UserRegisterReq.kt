@@ -1,4 +1,4 @@
-package toy.invitation.toyinvitation.config
+package toy.invitation.toyinvitation.config.req
 
 data class UserRegisterReq (
     val id: Long,
